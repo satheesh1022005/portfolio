@@ -1,0 +1,107 @@
+.home-container {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #fff;
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    margin-left: 10px; /* Adjust margin as needed */
+    cursor: pointer;
+    background-color: #fff;
+    width: 55px;
+    height:55px;
+}
+
+.properties {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+.properties li {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.properties li:hover {
+    opacity: 0.5;
+}
+
+.properties li a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-open,
+.btn-close {
+    display: none;
+    cursor: pointer;
+}
+/*media query 991.98************************************************************************/
+@media (max-width: 991.98px) {
+    .home-container {
+        height: 7%;
+    }
+
+    .logo {
+        width: 35px;
+        height:35px;
+    }
+
+    .properties {
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: end;
+        background-color: #050038d8;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        border-top-left-radius:10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .properties.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        margin-top: 1%;
+    }
+
+    .properties li {
+        margin:20px;
+        border-bottom: 2px solid #fff;
+        padding: 10px;
+        width:80%;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .properties li:hover{
+        backdrop-filter: blur(100);
+        background-color: #0c008a15;
+        background: transparent;
+    }
+    .properties li a{
+        color:#fff;
+    }
+    .btn-open {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .btn-close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

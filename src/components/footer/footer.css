@@ -1,0 +1,142 @@
+.contact-container{
+    background-color: #020021;
+    min-height: 100svh;
+    width: 100%;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+}
+.form {
+    width: 40%;
+    background-color:#050038;
+    padding: 70px;
+    border-radius: 2rem;
+}
+.form legend{
+    font-weight: 700;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form button{
+    border: none;
+    margin-top:15px;
+    background-color: rgb(26, 191, 216);
+    color:#fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+.form button:hover{
+    background-color: #d4d4d4;
+    color: black;
+}
+.code-symbol{
+    width: 55%;
+    height: 600px;
+    position: absolute;
+    align-items: center;
+    right:3%;
+}
+.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .symbol svg {
+    flex: 0 0 auto; /* Make sure the SVGs don't grow or shrink */
+  }
+  
+  .symbol h1 {
+    margin: 0; /* Remove default margin */
+  }
+.code-icon{
+    margin-left: 30px;
+    margin-right: auto;
+    color:#fff;
+}
+.code-icon .social a svg{
+    margin-left:120px;
+    width:50px;
+    height: 50px;
+    color:#fff;
+}
+.code-icon .social a svg:hover{
+    width:52px;
+    height: 52px;
+    color:#fff;
+    opacity: 0.8;
+}
+@media (max-width: 991.98px) {
+    .contact-container {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding:10px;
+    }
+
+    .form {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        margin:50px;
+    }
+    .symbol {
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .symbol svg:first-child{
+        width: 80%;
+        width: 50px;
+        margin: 10px;
+        margin-left: 20px;   
+    }
+    .symbol svg:last-child{
+        width: 80%; 
+        width: 50px;
+        margin: 10px;
+        margin-right: 10px;   
+    }
+
+    .symbol h1 {
+        margin:1px; 
+    }
+    .code-symbol {
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+    }
+    .code-icon {
+        display: block;
+        top: auto;
+        padding: 0;
+        width: 100%;
+        margin: auto;
+    }
+    .code-icon .social a svg {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,146 @@
+.projects-container{
+    min-height: 100vh;
+    margin:10px;
+    
+}
+.skills h3{
+    margin-top:20px;
+    font-weight: bolder;
+}
+.projects{
+    margin:25px;
+}
+.projects .skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills-logo {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 20px; 
+}
+.skills-logo img{
+    width:80px;
+    height: 80px;
+    margin:10px;
+}
+.project-card-container{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+.project-grid{
+    border-radius: 20px;
+    margin:10px;
+    background:linear-gradient(180deg,#0D0547,#060023);
+    width: 350px;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+/*****************************************************/
+.grid-content{
+    position: relative;
+    padding: 5rem;
+    height: 480px;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    
+}
+/* .project-grid:hover .grid-content{
+    transform: rotateY(180deg);
+} */
+
+.grid-front,
+.grid-back{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    backface-visibility: hidden;
+}
+.grid-back{
+    margin:20px;
+    border-radius: 20px;
+    background-color: transparent;
+    color:#fff;
+    border:2px solid #fff;
+    transform: rotateY(180deg);
+}
+.flipped {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.grid-back h5{
+    display: flex;
+    justify-content: center;
+    margin:20px;
+}
+.grid-back p{
+    margin:10px;
+}
+/*****************************************************/
+.project-img{
+    position:relative;
+    align-items: center;
+    width: 90%;
+    height: 250px;
+    margin:5% ;
+    border-radius: 20px;
+    background-color: white;
+    
+}
+
+.project-img img{
+    border: 5px solid #fff;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 20px;
+    z-index: -1;
+}
+.project-img .github-code{
+    position: absolute;
+    top:5%;
+    right:5%;
+    border-radius:50%;
+    border: 5px solid black;
+    z-index:1;
+}
+.project-description{
+    margin:10px auto;
+    color:#fff;
+    width:90%;
+}
+.i-button {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+.project-introduction {
+    margin:25px;
+}
+.project-introduction p{
+    margin-top:30px;
+    margin-bottom: 30px;
+    width:70%;
+    color:#898989;
+    text-align:justify;
+}
+.project-introduction h1{
+    font-weight: bolder;
+}
+/******************************************************/
+@media(max-width:991.98px){
+    .project-introduction p{
+        width: 100%;
+        font-size: 12px;
+    }
+    .scrollable-content{
+        height: 80%;
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,127 @@
+.self{
+    background:linear-gradient(-90deg,#003161,#0059B3);
+    min-height: 100svh;
+    width: 100%;
+    color:#fff;
+    box-shadow: 25px rgba(0, 0, 0, 0.1);
+    padding: 30px 80px;
+    margin:0;
+    padding: 0;
+}
+.self section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:15px ;
+}
+.self div{
+    margin-top:20px;
+}
+.self div p:last-child{
+    line-height: 30px;
+    padding: 200px;
+}
+.self a{
+    text-decoration: none;
+    color:#fff
+}
+.objective{
+    text-align:justify;
+}
+.self button{
+    border: none;
+    margin-top:10px;
+    background-color: rgb(26, 191, 216);
+    color:#fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    margin:15px;
+    margin-top:35px;
+}
+.self button:hover{
+    background-color: #d4d4d4;
+    color: black;
+}
+.self-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.self-intro{
+    margin-left:6.5rem;
+}
+.self-content .objective{
+    width:80%;
+}
+.storyboard-container{
+    margin-right:6.5rem;
+    width:500px;
+    height: 350px;
+}
+.storyboard{
+    background-color: #fff;
+    height:100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    animation: borderAnimation 4s infinite;
+}
+.storyboard img{   
+        
+        border:2px dashed #fff;
+        width:100%;
+        height:100%;       
+        transition: opacity 1s ease-in-out;
+        filter:sepia(1);
+}
+.storyboard-container figcaption{
+    width: 90%;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+}
+@keyframes borderAnimation {
+    0% {
+        border-color: #ff0000;
+        opacity: 0.8;
+    }
+    50% {
+        border-color: #82ff00; 
+        opacity: 0.8;
+    }
+    100% {
+        border-color: #ffff00;
+        opacity: 0.8;
+    }
+}
+@media(max-width:991.98px){
+    .storyboard-container {
+        margin: 0 auto;
+        /* max-width: 75%;  */
+        width: 300px; 
+        height: 200px;
+    }
+    .self{
+        height:65em;
+    }
+    .self-content{
+        display: block;
+        justify-content: space-between;
+        
+    }
+    .self-intro{
+        margin:0 auto;
+        text-align:start;
+    }
+    .self-content .objective{
+        width:100%;
+    }
+    .self button{
+        margin:0 7%;
+        
+    }
+    
+        
+
+}
