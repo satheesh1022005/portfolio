@@ -44,13 +44,13 @@ function About(){
                     <h2>SATHEESH K</h2>
                     <p>Aspiring Software Developer</p>
                     <p className='objective'>
-                    I am SATHEESH, currently pursuing a degree in computer science and design at Kongu Engineering College.I am an aspiring software developer with a strong passion for learning and solving real-world problemsthrough technology.I am consistently eager to acquire new knowledge and stay updated on emergingtechnologies. If you are interested in exploring my coding projects and accomplishments, you can find themon my 
+                    I am SATHEESH, currently pursuing a degree in computer science and design at Kongu Engineering College.I am an aspiring software developer with a strong passion for learning and solving real-world problems through technology.I am consistently eager to acquire new knowledge and stay updated on emerging technologies. If you are interested in exploring my coding projects and accomplishments, you can find them on my 
                       <a href='https://github.com/satheesh1022005/' target='_blank' rel="noreferrer">
                        <em><b> GitHub</b></em>
                       </a> and 
                       <a href='https://www.linkedin.com/in/-satheesh-k/' target='_blank' rel="noreferrer"> 
                       <em><b> linkedin </b></em>
-                      </a> profiles. Moreover, I am open to collaboration opportunities with fellow enthusiastsin the field.
+                      </a> profiles. Moreover, I am open to collaboration with fellow enthusiasts in the field.
                     </p>
                     <button onClick={openPdf}>RESUME</button>
                     <a href='mailto:satheesh1022005@gmail.com' target='_blank' rel="noreferrer"> 
