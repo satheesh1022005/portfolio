@@ -34,7 +34,7 @@ function Projects() {
           color: "text-danger",
         },
       ],
-      githubLink: "https://github.com/satheesh1022005/eco_saver/tree/gh-pages",
+      githubLink: "https://github.com/satheesh1022005/bus-management-system",
       image: eco_saver,
       about:
         "This web application optimizes bus transportation within KEC using real-time GPS and smart scheduling. Key features include real-time tracking, dynamic scheduling, user notifications, seat availability, and a feedback system. Developed for the KEC Hackathon, it aims to enhance campus transportation efficiency and sustainability.",
