@@ -8,10 +8,63 @@ import bootstrap from "../../assets/bootstrap.svg";
 import git from "../../assets/git.svg";
 import c from "../../assets/c.svg";
 import java from "../../assets/java.svg";
+import express from "../../assets/express.jpg";
+import flask from "../../assets/flask.jpg";
+import mongodb from "../../assets/mongodb.png";
+import mysql from "../../assets/mysql.jpg";
+import node from "../../assets/node.jpg";
+import python from "../../assets/python.jpg";
+
 import eco_saver from "../../assets/ecosaver.jpeg";
 import { useState } from "react";
+import ProjectCard from "./ProjectCard";
+import ayush from "../../assets/ayush.png";
+import definify from "../../assets/definify.png";
+import learnSQL from "../../assets/learnSQL.png";
+import math from "../../assets/math.png";
+import nlp2er from "../../assets/nlp2er.png";
+import tenzies from "../../assets/tenzies.png";
+import bms from "../../assets/bms.png";
 function Projects() {
   const projectsData = [
+    {
+      name: "NLP-Driven Database Automation Tool",
+      description:
+        "Developed an NLP-powered automation tool that converts natural language into ER diagrams and creates SQL databases, streamlining database creation from concept to deployment.",
+      techStack: [
+        {
+          stack: "#python",
+          color: "text-danger",
+        },
+        {
+          stack: "#MERN",
+          color: "text-info",
+        },
+      ],
+      githubLink: "https://github.com/satheesh1022005/NLP2DB",
+      image: nlp2er, // Replace with actual image path or URL
+      about:
+        "Fine-tuned Google Gemini 1.5 Pro Flash for ER diagram generation, created an agent with CrewAI for NLP-to-SQL query generation, and utilized the Mermaid library for dynamic ER diagram visualization.",
+    },
+    {
+      name: "LearnSQL",
+      description:
+        "Interactive SQL learning platform designed for college DBMS classes. It enables faculty to assign exercises and tests, while students can learn, practice SQL, and receive guidance. Faculty can also monitor student progress for improved assessment.",
+      techStack: [
+        {
+          stack: "#MERN",
+          color: "text-info",
+        },
+        {
+          stack: "#python",
+          color: "text-danger",
+        },
+      ],
+      githubLink: "https://github.com/satheesh1022005/DBlearn",
+      image: learnSQL, // Replace with actual image path or URL
+      about:
+        "Developed with the MERN stack, integrated Google Gemini 1.5 Pro Flash for NLP-based doubt clearing, implemented RBAC, and utilized AlaSQL for the SQL playground.",
+    },
     {
       name: "BUS_MANAGEMENT SYSTEM",
       description:
@@ -35,43 +88,141 @@ function Projects() {
         },
       ],
       githubLink: "https://github.com/satheesh1022005/bus-management-system",
-      image: eco_saver,
+      image: bms,
       about:
         "This web application optimizes bus transportation within KEC using real-time GPS and smart scheduling. Key features include real-time tracking, dynamic scheduling, user notifications, seat availability, and a feedback system. Developed for the KEC Hackathon, it aims to enhance campus transportation efficiency and sustainability.",
     },
     {
-      name: "Eco_Saver",
+      name: "Electricity Monitoring & Optimization System",
       description:
-        "Created an app to save money by managing electricity use, promoting eco-friendly habits with practical tips for efficient electricity usage.",
+        "Built an electricity monitoring system that tracks appliance consumption, creates custom usage plans, and alerts users to turn off appliances when they exceed their targets.",
       techStack: [
         {
-          stack: "#react",
+          stack: "#MERN",
           color: "text-success",
         },
         {
-          stack: "#arduino",
+          stack: "#Arduino",
           color: "text-info",
         },
         {
-          stack: "#python",
+          stack: "#Embedded C",
+          color: "text-warning",
+        },
+      ],
+      githubLink:
+        "https://github.com/satheesh1022005/Electricity_Monitoring_and_Optimization_System", // Replace with actual GitHub link
+      image: eco_saver, // Replace with the actual image variable
+      about:
+        "Fetched data from sensors using Arduino Nano, transmitted it to the Node.js server via Bluetooth, and leveraged WebSocket for real-time client-server interaction. The system optimizes electricity consumption by offering users insights and recommendations for efficient appliance usage.",
+    },
+    {
+      name: "Definify",
+      description:
+        "Definify is a Chrome extension that helps you find the meaning of English words, as well as their synonyms and antonyms.",
+      techStack: [
+        {
+          stack: "#HTML",
+          color: "text-success",
+        },
+        {
+          stack: "#CSS",
+          color: "text-info",
+        },
+        {
+          stack: "#JavaScript",
+          color: "text-warning",
+        },
+      ],
+      githubLink:
+        "https://github.com/satheesh1022005/definify-chrome-extension", // Replace with actual GitHub link
+      image: definify, // Replace with the actual image variable or path
+      about:
+        "Definify is a Chrome extension that provides instant access to word meanings, synonyms, and antonyms, enhancing the user's vocabulary comprehension and language skills.",
+    },
+    {
+      name: "Math Fiesta",
+      description:
+        "Math Fiesta is an event webpage particularly designed to showcase the Maths Club's national level event, Math Fiesta '24. It is intended to advertise the event and facilitate the registration of students across the city.",
+      techStack: [
+        {
+          stack: "#React",
+          color: "text-success",
+        },
+      ],
+      githubLink: "https://github.com/T-Dharun/Math_Fiesta", // Replace with actual GitHub link if available
+      liveLink: "https://mathsclub.kongu.edu/",
+      image: math, // Replace with the actual image variable or path
+      about:
+        "Math Fiesta is a dynamic event webpage developed for the Maths Club at Kongu Engineering College. The platform promotes the national-level Math Fiesta '24 event and enables students to register for the event easily, ensuring smooth event management and wider participation.",
+    },
+    {
+      name: "Tenzies",
+      description:
+        "A Tenzies game application using React.js, Node.js, Express.js, and SQL, featuring interactive gameplay, secure user authentication, and robust backend API for managing game data and scores. This project showcases my full-stack development skills and ability to create engaging and efficient web applications.",
+      techStack: [
+        {
+          stack: "#React.js",
+          color: "text-success",
+        },
+        {
+          stack: "#Node.js",
+          color: "text-info",
+        },
+        {
+          stack: "#Express.js",
+          color: "text-info",
+        },
+        {
+          stack: "#SQL",
           color: "text-danger",
         },
       ],
-      githubLink: "https://github.com/satheesh1022005/eco_saver/tree/gh-pages",
-      image: eco_saver,
+      githubLink: "https://github.com/satheesh1022005/Tenzies", // Replace with actual GitHub link if available
+      liveLink:
+        "https://66912dbf79b92c224df2ae69--zingy-hamster-855659.netlify.app/",
+      image: tenzies, // Replace with the actual image variable or path
       about:
-        "The electricity conservation mobile app minimizes expenses and environmental impact, utilizing digital energy meters for real-time usage data. It educates users on efficient appliance usage through global best practices, offering suggestions for optimal times to meet monthly targets. The 'Streak Society' gamified feature fosters friendly competition through leaderboards, enhancing engagement. This app aims to empower users with knowledge for responsible electricity consumption, contributing to a more sustainable future.",
+        "Tenzies is an engaging dice game that allows users to roll dice and attempt to hold on to certain dice values to achieve a score. The application features user authentication for personalized gameplay and tracks scores in a secure backend powered by Node.js and Express.js, while the game interface is designed using React.js for a responsive user experience.",
     },
+    {
+      name: "AYUSH Startup Registration Portal",
+      description:
+        "A web-based platform to streamline and simplify the registration process for AYUSH startups. It helps new entrepreneurs complete registration by submitting required documents, ensuring regulatory compliance, and receiving real-time feedback.",
+      techStack: [
+        {
+          stack: "#MERN",
+          color: "text-success",
+        },
+        {
+          stack: "#Python",
+          color: "text-warning",
+        },
+      ],
+      githubLink: "https://github.com/satheesh1022005/ayush", // Replace with actual GitHub link if available
+      image: ayush, // Replace with the actual image variable or path
+      about:
+        "The AYUSH Startup Registration Portal simplifies the startup registration process for AYUSH businesses by allowing them to submit required documentation, validate their information, and receive approval from relevant authorities. It includes features for document uploads, user authentication, and verification, powered by Node.js, Express.js, and MongoDB, ensuring data security and scalability. This platform aims to empower entrepreneurs in the AYUSH sector by making the registration process faster and more efficient.",
+    },
+
     // Add more projects as needed
   ];
-  const [isFlippedArray, setIsFlippedArray] = useState(
-    Array(projectsData.length).fill(false)
-  );
-  const handleFlip = (index) => {
-    const newIsFlippedArray = [...isFlippedArray];
-    newIsFlippedArray[index] = !newIsFlippedArray[index];
-    setIsFlippedArray(newIsFlippedArray);
-  };
+  const skills = [
+    { name: "HTML", image: html },
+    { name: "CSS", image: css },
+    { name: "JavaScript", image: js },
+    { name: "Bootstrap", image: bootstrap },
+    { name: "MySQL", image: mysql },
+    { name: "MongoDB", image: mongodb },
+    { name: "Express.js", image: express },
+    { name: "React", image: react },
+    { name: "Node.js", image: node },
+    { name: "Python", image: python },
+    { name: "Flask", image: flask },
+    { name: "Git", image: git },
+    { name: "Java", image: java },
+    { name: "C", image: c },
+  ];
   return (
     <div className="projects-container" id="project">
       <div className="projects">
@@ -80,14 +231,9 @@ function Projects() {
           <p className="text-info">I can say i'm quite good at</p>
         </section>
         <section className="skills-logo">
-          <img src={html} alt="html" />
-          <img src={css} alt="css" />
-          <img src={js} alt="js" />
-          <img src={bootstrap} alt="bootstrap" />
-          <img src={react} alt="react" />
-          <img src={git} alt="git" />
-          <img src={java} alt="java" />
-          <img src={c} alt="c" />
+          {skills.map((skill, index) => (
+            <img src={skill.image} alt={skill.name} />
+          ))}
         </section>
         <section className="project-introduction">
           <h1>Projects</h1>
@@ -109,79 +255,11 @@ function Projects() {
             solutions.
           </p>
         </section>
-        <section className="project-card-container">
+        <div className="projects-container-grid">
           {projectsData.map((project, index) => (
-            <div className="project-grid" key={index}>
-              <div
-                className={`grid-content ${
-                  isFlippedArray[index] ? "flipped" : ""
-                }`}
-              >
-                {/*'flipped grid-content' > */}
-                <div className="grid-front">
-                  <section className="project-img">
-                    <a
-                      className="github-code"
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <svg
-                        height="32"
-                        aria-hidden="true"
-                        viewBox="0 0 16 16"
-                        version="1.1"
-                        width="32"
-                        data-view-component="true"
-                        className="octicon octicon-mark-github v-align-middle color-fg-default"
-                      >
-                        <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-                      </svg>
-                    </a>
-                    <img src={project.image} alt="eco_saver" />
-                  </section>
-                  <section className="project-description">
-                    <h4>{project.name}</h4>
-                    <p>{project.description}</p>
-                    <p>
-                      {project.techStack.map((stack, index) => (
-                        <span className={stack.color} key={index}>
-                          {stack.stack}{" "}
-                        </span>
-                      ))}
-                    </p>
-                    <div
-                      className="i-button"
-                      onClick={() => {
-                        handleFlip(index);
-                      }}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        fill="#fff"
-                        className="bi bi-info-circle-fill "
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
-                      </svg>
-                    </div>
-                  </section>
-                </div>
-                <div
-                  className="grid-back"
-                  onClick={() => {
-                    handleFlip(index);
-                  }}
-                >
-                  <h5>About</h5>
-                  <p className="scrollable-content">{project.about}</p>
-                </div>
-              </div>
-            </div>
+            <ProjectCard project={project} key={index} />
           ))}
-        </section>
+        </div>
       </div>
     </div>
   );

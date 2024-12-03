@@ -1,146 +1,225 @@
-.projects-container{
-    min-height: 100vh;
-    margin:10px;
-    
+.projects-container {
+  min-height: 100vh;
+  margin: 10px;
 }
-.skills h3{
-    margin-top:20px;
-    font-weight: bolder;
+.skills h3 {
+  margin-top: 20px;
+  font-weight: bolder;
 }
-.projects{
-    margin:25px;
+.projects {
+  margin: 25px;
 }
-.projects .skills{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.projects .skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .skills-logo {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    margin: 20px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
 }
-.skills-logo img{
-    width:80px;
-    height: 80px;
-    margin:10px;
+.skills-logo img {
+  width: 80px;
+  height: 80px;
+  margin: 20px;
 }
-.project-card-container{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around;
-}
-.project-grid{
-    border-radius: 20px;
-    margin:10px;
-    background:linear-gradient(180deg,#0D0547,#060023);
-    width: 350px;
-    height: 100%;
-    cursor: pointer;
-    position: relative;
-}
-/*****************************************************/
-.grid-content{
-    position: relative;
-    padding: 5rem;
-    height: 480px;
-    transition: transform 1500ms;
-    transform-style: preserve-3d;
-    
-}
-/* .project-grid:hover .grid-content{
-    transform: rotateY(180deg);
-} */
-
-.grid-front,
-.grid-back{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left:0;
-    right:0;
-    backface-visibility: hidden;
-}
-.grid-back{
-    margin:20px;
-    border-radius: 20px;
-    background-color: transparent;
-    color:#fff;
-    border:2px solid #fff;
-    transform: rotateY(180deg);
-}
-.flipped {
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
-.grid-back h5{
-    display: flex;
-    justify-content: center;
-    margin:20px;
-}
-.grid-back p{
-    margin:10px;
-}
-/*****************************************************/
-.project-img{
-    position:relative;
-    align-items: center;
-    width: 90%;
-    height: 250px;
-    margin:5% ;
-    border-radius: 20px;
-    background-color: white;
-    
+@media (max-width: 991.98px) {
+  .project-introduction p {
+    width: 100%;
+    font-size: 12px;
+  }
+  .scrollable-content {
+    height: 80%;
+    overflow-y: auto;
+  }
 }
 
-.project-img img{
-    border: 5px solid #fff;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    border-radius: 20px;
-    z-index: -1;
+/*project card design*/
+.projects-container-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.project-img .github-code{
-    position: absolute;
-    top:5%;
-    right:5%;
-    border-radius:50%;
-    border: 5px solid black;
-    z-index:1;
+
+.laptop-card {
+  width: 30%;
+  background: linear-gradient(180deg, #0d0547, #060023);
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  padding: 10px;
+  text-align: justify;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.project-description{
-    margin:10px auto;
-    color:#fff;
-    width:90%;
+
+.laptop-top {
+  position: relative;
+  background: #1f1f2f;
+  border-radius: 10px 10px 0 0;
 }
-.i-button {
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
+
+.screen {
+  width: 100%;
+  height: 230px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: black;
 }
-.project-introduction {
-    margin:25px;
+
+.screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.project-introduction p{
-    margin-top:30px;
-    margin-bottom: 30px;
-    width:70%;
-    color:#898989;
-    text-align:justify;
+
+.laptop-bottom {
+  padding: 15px;
 }
-.project-introduction h1{
-    font-weight: bolder;
+
+.project-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
+
+.project-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.project-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.project-link.github {
+  background-color: #24292e;
+}
+
+.project-link.live {
+  background-color: #2d7dd2;
+}
+
+.project-link:hover {
+  opacity: 0.9;
+}
+
+.laptop-bottom {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links-container {
+  margin: 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.tech-stack {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-item {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background-color: #f4f4f40c; /* Light background */
+  color: #333; /* Text color */
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background-color: #333; /* Dark background on hover */
+  color: #ffffff; /* Light text on hover */
+}
+
+/* Add color-specific classes */
+.text-success {
+  color: #28a745; /* Green */
+}
+
+.text-info {
+  color: #17a2b8; /* Blue */
+}
+
+.text-danger {
+  color: #dc3545; /* Red */
+}
+
 /******************************************************/
-@media(max-width:991.98px){
-    .project-introduction p{
-        width: 100%;
-        font-size: 12px;
-    }
-    .scrollable-content{
-        height: 80%;
-        overflow-y: auto;
-    }
+
+/* Responsive Styles */
+
+/* Small screens (Mobile) */
+@media (max-width: 767px) {
+  .laptop-card {
+    width: 90%; /* Make cards take up most of the width */
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  .project-name {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .project-description {
+    font-size: 0.85rem; /* Adjust font size */
+  }
+
+  .tech-item {
+    font-size: 0.8rem; /* Adjust tech item font size */
+    padding: 3px 6px; /* Adjust padding */
+  }
+}
+
+/* Medium screens (Tablet) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .laptop-card {
+    width: 45%; /* Make cards take up less width on tablet */
+    margin: 15px; /* Adjust margin */
+  }
+
+  .project-name {
+    font-size: 1.1rem; /* Adjust font size */
+  }
+
+  .project-description {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .tech-item {
+    font-size: 0.9rem; /* Adjust tech item font size */
+  }
+}
+
+/* Large screens (Desktop) */
+@media (min-width: 1025px) {
+  .laptop-card {
+    width: 30%; /* Keep the card width at 30% on large screens */
+    margin: 20px; /* Keep margin consistent */
+  }
 }
