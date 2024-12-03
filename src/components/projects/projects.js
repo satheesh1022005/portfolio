@@ -14,9 +14,7 @@ import mongodb from "../../assets/mongodb.png";
 import mysql from "../../assets/mysql.jpg";
 import node from "../../assets/node.jpg";
 import python from "../../assets/python.jpg";
-
 import eco_saver from "../../assets/ecosaver.jpeg";
-import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ayush from "../../assets/ayush.png";
 import definify from "../../assets/definify.png";
